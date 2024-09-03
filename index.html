@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<head>
+<style>
+    body{
+        box-shadow: 100px;
+    }
+</style>
+    <script>
+    
+        function displayMe(text , grade1 , grade2 , grade3 , grade4 , grade5){
+            var textValue = document.getElementById('text').value;
+            var textValue2 = document.getElementById('grade1').value;
+            var textValue3 = document.getElementById('grade2').value;
+            var textValue4 = document.getElementById('grade3').value;
+            var textValue5 = document.getElementById('grade4').value;
+            var textValue6 = document.getElementById('grade5').value;
+    
+            var total = Number (textValue2) +  Number (textValue3) + Number(textValue4) + Number(textValue5) + Number(textValue6);
+            var totalAverage = parseFloat(total) / 5;
+    
+            alert("Name: " + textValue + "\n" +
+                      "IP1: " + textValue2 + "\n" +
+                      "IMI: " + textValue3 + "\n" +
+                      "OOP: " + textValue4 + "\n" +
+                      "EDP: " + textValue5 + "\n" +
+                      "HCI: " + textValue6 + "\n" +
+                      "Average: " + totalAverage);
+        }
+    </script>
+    
+</head>
+    
+<body>
+        
+        <b>Name<input type="text" id="text"></b><br>
+        <h4>Grade</h4>
+        <b>IPI<input type="number" id="grade1"></b><br><br>
+        <b>IMI<input type="number" id="grade2"></b><br><br>
+        <b>OOP<input type="number" id="grade3"></b><br><br>
+        <b>EDP<input type="number" id="grade4"></b><br><br>
+        <b>HCI<input type="number" id="grade5"></b><br><br>
+    <button onclick="displayMe(text , grade1 , grade2 , grade3 , grade4 , grade5)">Compute mo nga baby</button>
+    
+
+</body>
+</html>
